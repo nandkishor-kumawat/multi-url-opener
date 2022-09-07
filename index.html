@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <meta charset="UTF-8">
+    <title>SM URL opener</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+    <div class="logo">
+        <img src="img/logo.png">
+    </div>
+
+    <div class="info">
+        <p><a href="#singleurl">Open single link with Multiple times at Once</a></p>
+        <p><a href="#multiurl">Open Multiple Links Simultaneously</a></p>
+        <p style="color: #a8a8a8;">Works With All Major Browsers</p>
+        <p style="color: #a8a8a8;">100% Free Web Tool</p>
+        <p style="color: #ff9100;font-size: 18px;"><u>NOTE</u> : Opening multiple urls at once can drown your computer
+            and freeze your browser for few seconds.</p>
+    </div>
+
+    <div id="main">
+        <div id="singleurl">
+            <h1>Single URL Opener</h1>
+            <div class="help">URLs are not opening? need <span onclick="show_help()">help</span></div>
+            <input id="surl" value="" placeholder="Enter url to open multiple times"><br><br>
+            <input type="number" id="url-number" value="" placeholder="Number of times you want to open url"><br><br>
+            <input type="button" class="submit" onclick="open_single()" value="Open URL">
+            <input type="reset" class="reset" value="Clear">
+           
+        </div>
+
+        <div id="space">&nbsp;</div>
+
+        <div id="multiurl">
+            <h1>Multiple URL Opener</h1>
+            <div class="help">URLs are not opening? need <span onclick="show_help()">help</span></div>
+            <textarea name="urls-list" id="urls-list" rows="12" placeholder="Paste URLs, one per line or separated by commas or separated by space"></textarea>
+            <br />
+            <br />
+            <input value="Open URLs" class="submit" type="button" onclick="open_all();" value="Open Multiple URLs">
+            <input type="reset" class="reset" id="resetall" value="Clear">
+            <br />
+            <div id="murls-list"></div>
+        </div>
+    </div>
+
+    <div class="faqs">
+        <h1 style="text-align: center;">FAQs</h1>
+
+        <button class="accordion" id="faq1">URLs not opening?What to do?</button>
+        <div class="panel">
+            <p> If the URLs do not open, it means the pop-ups are blocked in your browser.<br> Below are the
+                instructions on how to disable pop-up blockers.</p>
+            <u>Chrome</u>
+            <ul>
+                <li> Click on the icon that appears in address bar</li>
+                <li> Select “Always allow pop-ups from https://smurlopener.blogspot.com/</li>
+            </ul>
+            <u>Firefox</u>
+            <ul>
+                <li>Open Settings</li>
+                <li>Open Content Tab</li>
+                <li>Under Pop Ups Click Exceptions</li>
+                <li>Enter https://smurlopener.blogspot.com/<br> and select Allow</li>
+                <li>Save and Restart Firefox</li>
+            </ul>
+            <u>Edge</u>
+            <ul>
+                <li>Open Settings</li>
+                <li>Go to Advanced Settings</li>
+                <li>Switch Block Pop Ups Off</li>
+                <li>After using URL Opener Roll back these settings</li>
+            </ul>
+        </div>
+
+        <button class="accordion">What is the SM URL Opener Tool?</button>
+        <div class="panel">
+            <p itemprop="text">SM URL Opener tool enables you to open multiple URLs at once as well as it can open
+                single url for multiple time. Simply paste them into the text box above and with one click all the URLs
+                will open in separate tabs. However, if you use Google
+                Chrome you will have to go into the settings and allow for popups from our website
+                https://smurlopener.blogspot.com/.
+            </p>
+        </div>
+
+        <button class="accordion">Which browsers are supported?</button>
+        <div class="panel">
+            <p itemprop="text">SM URL Opener Tool works with any browser that supports JavaScript. All the major
+                browsers such as Internet Explorer, Firefox, Chrome, Opera, and Midori works well with it.</p>
+        </div>
+
+        <button class="accordion">How To Use SM URL Opener?</button>
+        <div class="panel">
+            <p itemprop="text">
+                If you want to open single url for multiple time then just paste your url into Single URL Opener and set
+                number of times you want to open your url and just press open url button,that's all.<br> If you want to
+                open multiple urls in one
+                click then paste your urls in Multiple URL Opener textarea (separated by space,commas or line-break) and
+                press open url button and your all urls will open. If urls not opened, make sure you allowed pop-ups
+                from our site.
+            </p>
+        </div>
+
+        <button class="accordion">How Many URLs Can I Open At Once?</button>
+        <div class="panel">
+            <p itemprop="text">There is no limit to the number of URLs. However, You must know your computer's ability
+                to determine how many URLs it can open at the same time without freezing or slowing down.
+            </p>
+        </div>
+    </div>
+
+    <div id="copyright">SM URL Opener © 2021</div>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
