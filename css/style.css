@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -19,6 +21,7 @@ body {
 
 .info a {
     color: #a8a8a8;
+    margin: 0.3em 0;
 }
 
 .info h1 {
@@ -28,11 +31,19 @@ body {
 
 #main {
     text-align: center;
-    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (width<=800px) {
+    #main {
+        flex-direction: column;
+    }
 }
 
 input {
     outline: none;
+    margin: 0.5em 0;
 }
 
 #singleurl {
@@ -40,12 +51,7 @@ input {
     margin: 0 auto 30px;
 }
 
-#surl {
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
-}
-
+#surl,
 #url-number {
     width: 100%;
     padding: 10px;
@@ -69,14 +75,20 @@ input {
 #surl:focus {
     color: #212529;
     background-color: #fff;
-    border: 1px solid #3399ff;
+    border-color: #3399ff;
     outline: none;
     box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .5);
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
+.btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
 .submit {
-    width: 49%;
+    width: 100%;
     padding: 10px;
     background-color: #3399ff;
     color: aquamarine;
@@ -92,13 +104,12 @@ input {
     color: white;
     background-color: #3399ff;
     border-color: #86b7fe;
-    border: 1px solid;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     transition: all .15s ease-in-out;
 }
 
 .reset {
-    width: 49%;
+    width: 100%;
     padding: 10px;
     color: #ff0000;
     font-weight: bold;
@@ -124,6 +135,7 @@ input {
     border-bottom: 1px dotted;
     padding: 10px;
     text-align: center;
+    margin: 1em 0;
 }
 
 #murls-list {
@@ -151,34 +163,6 @@ input {
     color: dodgerblue;
 }
 
-#space {
-    display: none;
-}
-
-@media screen and (max-width:899px) {
-    #space {
-        border-bottom: 1px solid #ff00006e;
-        margin: 50px auto;
-        width: 360px;
-        display: flex;
-        align-self: center;
-    }
-}
-
-@media screen and (min-width:900px) {
-    #space {
-        border-right: 1px solid #ffffff6e;
-        margin: 0 10%;
-        height: 350px;
-        display: inline-table;
-    }
-
-    #singleurl,
-    #multiurl {
-        display: inline-table;
-    }
-}
-
 .logo {
     margin: 70px auto 0;
     display: flex;
@@ -201,8 +185,11 @@ input {
     padding: 2px;
     background: firebrick;
 }
-.help>span{
-    color: #00ff00;cursor: pointer;text-decoration: underline;
+
+.help>span {
+    color: #00ff00;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 #copyright {
@@ -211,19 +198,19 @@ input {
     color: white;
     padding: 10px;
     text-align: center;
+    text-decoration: underline;
 }
 
 /** accordion **/
-
-.faqs {
-    max-width: 890px;
-    margin: auto;
+.faq-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media screen and (max-width:899px) {
-    .faqs {
-        margin: 10px;
-    }
+.faqs {
+    max-width: 800px;
+    margin: auto 1em;
 }
 
 .accordion {
@@ -237,7 +224,6 @@ input {
     outline: none;
     font-size: 15px;
     transition: all 0.4s;
-    /* border-radius: 7px; */
     font-family: Oxygen, sans-serif;
     font-weight: bold;
     font-size: 18px;
@@ -275,4 +261,8 @@ input {
     border-radius: 0 0 7px 7px;
     color: #fff;
     line-height: 1.5;
+}
+
+ul {
+    margin-left: 1em;
 }
