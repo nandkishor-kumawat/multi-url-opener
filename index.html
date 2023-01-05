@@ -31,30 +31,35 @@
         <div id="singleurl">
             <h1>Single URL Opener</h1>
             <div class="help">URLs are not opening? need <span onclick="show_help()">help</span></div>
-            <input id="surl" value="" placeholder="Enter url to open multiple times"><br><br>
-            <input type="number" id="url-number" value="" placeholder="Number of times you want to open url"><br><br>
-            <input type="button" class="submit" onclick="open_single()" value="Open URL">
-            <input type="reset" class="reset" value="Clear">
-           
+            <input id="surl" value="" placeholder="Enter url to open multiple times">
+            <input type="number" id="url-number" value="" placeholder="Number of times you want to open url">
+            <div class="btns">
+                <input type="button" class="submit" onclick="open_single()" value="Open URL">
+                <input type="reset" class="reset" value="Clear">
+            </div>
         </div>
 
-        <div id="space">&nbsp;</div>
+ 
 
         <div id="multiurl">
             <h1>Multiple URL Opener</h1>
             <div class="help">URLs are not opening? need <span onclick="show_help()">help</span></div>
-            <textarea name="urls-list" id="urls-list" rows="12" placeholder="Paste URLs, one per line or separated by commas or separated by space"></textarea>
-            <br />
-            <br />
-            <input value="Open URLs" class="submit" type="button" onclick="open_all();" value="Open Multiple URLs">
-            <input type="reset" class="reset" id="resetall" value="Clear">
-            <br />
+            <textarea name="urls-list" id="urls-list" rows="12"
+                placeholder="Paste URLs, one per line or separated by commas or separated by space"></textarea>
+ 
+            <div class="btns">
+                <input value="Open URLs" class="submit" type="button" onclick="open_all();" value="Open Multiple URLs">
+                <input type="reset" class="reset" id="resetall" value="Clear">
+
+            </div>
+       
             <div id="murls-list"></div>
         </div>
     </div>
 
+<div class="faq-container">
     <div class="faqs">
-        <h1 style="text-align: center;">FAQs</h1>
+        <h1 style="text-align: center;margin: 0.5em 0;">FAQs</h1>
 
         <button class="accordion" id="faq1">URLs not opening?What to do?</button>
         <div class="panel">
@@ -117,6 +122,7 @@
             </p>
         </div>
     </div>
+</div>
 
     <div id="copyright">SM URL Opener © 2021</div>
 
