@@ -263,6 +263,10 @@ input {
     line-height: 1.5;
 }
 
+.panel + p {
+    padding: 10px 0;
+}
+
 ul {
     margin-left: 1em;
 }
