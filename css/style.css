@@ -263,7 +263,7 @@ input {
     line-height: 1.5;
 }
 
-.panel + p {
+.panel > p {
     padding: 10px 0;
 }
 
